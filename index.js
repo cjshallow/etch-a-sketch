@@ -48,3 +48,20 @@ function createCells(cn) {
 
 //ran into issue trying to append 'newCell' with quotes...but it isn't a
 // string! it's a node. no quotes. 
+
+
+
+//---------------------------------------------------------------------//
+
+
+// add event listener that changes the color of a cell on mouseover, and
+// stays that way & a function that changes the color to black
+
+
+const cellColor = document.querySelectorAll(".cell");
+
+cellColor.forEach((cell) => {
+    cell.addEventListener('mouseover', () => {
+        cell.style.background = "black";
+    });
+});
