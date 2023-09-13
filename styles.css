@@ -1,0 +1,13 @@
+
+.gridRows {
+    height: 20px;
+    width: 360px;
+
+}
+
+.cell {
+    border: 1px solid gray;
+    min-width: 20px;
+    min-height: 20px;
+    display: inline-block;
+  }
