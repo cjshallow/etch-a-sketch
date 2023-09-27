@@ -7,8 +7,14 @@ defaultGrid();
 function defaultGrid(){
     createRows(16);
     createCells(16);
-    hoverColor();
-}
+    onmousedown = () => {
+        hoverColor();
+    }
+    onmouseup = () => {
+        stopHoverColor();
+    }
+};
+
 
 
 function createRows(rn) {
@@ -27,15 +33,27 @@ function createCells(cn) {
     }
 }
 
+function fillCell() {
+    this.classList.add('filled');
+}
+
 
 function hoverColor() {
   const cellColor = document.querySelectorAll(".cell");
   cellColor.forEach((cell) => {
-      cell.addEventListener('mouseover', () => {
-          cell.style.background = "black";
+      cell.addEventListener('mouseover', fillCell)
       });
-  });
-};
+    }
+
+function stopHoverColor() {
+    const cellColor = document.querySelectorAll(".cell");
+    cellColor.forEach((cell) => {
+        cell.removeEventListener('mouseover', fillCell)
+        });
+      }
+
+
+
 
 
 function changeGrid(){
@@ -57,7 +75,13 @@ function changeGrid(){
       }
     }
   }
-  hoverColor();
+  onmousedown = () => {
+    hoverColor();
+  }
+  onmouseup = () => {
+    stopHoverColor();
+  }
+
 }
 
 

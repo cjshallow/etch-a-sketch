@@ -29,3 +29,7 @@ body {
     border: 1px solid gray;
     flex: 1;
   }
+
+.filled {
+    background-color: black;
+}
