@@ -1,16 +1,31 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
 
+#container {
+    width: 500px;
+    height: 500px;
+    display: flex; 
+    flex-direction: column;
+}
 
 .gridRows {
-    height: 20px;
-    width: 360px;
-
+    flex: 1;
+    display: flex;
 }
 
 .cell {
     border: 1px solid gray;
-    min-width: 20px;
-    min-height: 20px;
-    display: inline-block;
+    flex: 1;
   }
